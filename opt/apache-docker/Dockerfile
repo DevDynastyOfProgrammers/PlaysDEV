@@ -1,7 +1,7 @@
     FROM debian:latest
 
     # Metadata
-    LABEL maintainer="matveevsnarfu@gmail.com"
+    LABEL maintainer="sergmatcadet@gmail.com"
 
     # Install necessary packages
     RUN apt-get update && apt-get install -y apache2 php libapache2-mod-php
