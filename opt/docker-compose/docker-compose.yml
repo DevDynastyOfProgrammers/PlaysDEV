@@ -1,0 +1,23 @@
+    version: "3.8"
+
+    services:
+      nginx:
+        image: matveevsnarfu/nginx-image
+        ports:
+          - "82:82"
+          #- "443:443"
+        depends_on:
+          - apache
+        networks:
+          - mynetwork
+
+      apache:
+        image: matveevsnarfu/apache-image
+        ports:
+          - "8083:8083"
+        networks:
+          - mynetwork
+
+    networks:
+      mynetwork:
+        driver: bridge
